@@ -7,22 +7,35 @@ using DG.Tweening;
 
 public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Button button;           // Referência ao botão
-    public Vector3 scaleIncrease = new Vector3(1.2f, 1.2f, 1f);  // Escala aumentada
-    public float duration = 0.2f;  // Duração da animação
+    public Button button;           
+    public Vector3 scaleIncrease = new Vector3(1.2f, 1.2f, 1f);  
+    public float duration = 0.2f; 
     public GameObject image;
     public ParticleSystem explosionEffect;
+    public GameObject prefabToInstantiate; 
+    
 
-    private Vector3 originalScale; // Escala original
+
+    
+    
+
+    private List<string> string_test = new List<string> 
+    { 
+        "Foi sorteado o primeiro da lista.", 
+        "O segundo foi sorteado.", 
+        "A string escolhida foi a terceira."
+    };
+
+    private Vector3 originalScale; 
 
     private void Start()
     {
         if (button == null)
         {
-            button = GetComponent<Button>();  // Obtém o botão se não for atribuído
+            button = GetComponent<Button>();  
         }
 
-        originalScale = button.transform.localScale; // Armazena a escala original
+        originalScale = button.transform.localScale;
     }
 
 
@@ -30,22 +43,49 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (explosionEffect != null)
         {
-            explosionEffect.Play(); // Reproduz a animação de explosão
+            explosionEffect.Play(); 
         }
+
     }
 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Anima a escala para aumentar quando o mouse entra
-        button.transform.DOScale(scaleIncrease, duration).SetEase(Ease.OutBack);
+        
+        button.transform.Scale(scaleIncrease,duration);
         if(image != null)image.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Anima a escala para retornar ao normal quando o mouse sai
-        button.transform.DOScale(originalScale, duration).SetEase(Ease.InBack);
+       
+        button.transform.Scale(originalScale,duration);
         if(image != null)image.SetActive(false);
     }
+
+    public void CreateObject(){
+        if (prefabToInstantiate != null) // Verifica se o prefab está atribuído
+        {
+            var a = Instantiate(prefabToInstantiate); 
+            a.transform.position = Vector3.zero;
+
+            StringFunction();
+
+        }
+        else
+        {
+            Debug.LogWarning("Prefab não atribuído.");
+            StringFunction();
+        }
+    }
+
+
+    private void StringFunction(){
+        string stringDebug = string_test.GetRandomList();
+         Debug.Log(stringDebug);
+    }
+
+    
+
+
 }

@@ -610,6 +610,7 @@ MonoBehaviour:
   duration: 0.2
   image: {fileID: 51666753}
   explosionEffect: {fileID: 7460945393540004856}
+  prefabToInstantiate: {fileID: 1480452758}
 --- !u!1 &235230529
 GameObject:
   m_ObjectHideFlags: 0
@@ -5867,12 +5868,46 @@ Transform:
   m_GameObject: {fileID: 587301544}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5011139, y: -0.49888363, z: 0.49888363, w: 0.5011139}
-  m_LocalPosition: {x: 0.012, y: -2.24, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 631022466}
   m_LocalEulerAnglesHint: {x: -0.256, y: -90, z: 90}
+--- !u!1 &631022465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 631022466}
+  m_Layer: 0
+  m_Name: ParticleSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &631022466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631022465}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.012, y: -2.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 654684429615537467}
+  - {fileID: 1801772693}
+  - {fileID: 587301547}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &800877692
 GameObject:
   m_ObjectHideFlags: 0
@@ -6024,6 +6059,7 @@ MonoBehaviour:
   duration: 0.2
   image: {fileID: 359867304}
   explosionEffect: {fileID: 587301546}
+  prefabToInstantiate: {fileID: 1480452758}
 --- !u!1 &901647113
 GameObject:
   m_ObjectHideFlags: 0
@@ -6551,6 +6587,7 @@ MonoBehaviour:
   duration: 0.2
   image: {fileID: 1301185697}
   explosionEffect: {fileID: 1801772692}
+  prefabToInstantiate: {fileID: 1480452758}
 --- !u!1 &1301185697
 GameObject:
   m_ObjectHideFlags: 0
@@ -6651,6 +6688,37 @@ MonoBehaviour:
   m_Spacing: {x: 10, y: 50}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!1 &1480452758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480452760}
+  m_Layer: 0
+  m_Name: GameObjectExemple
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1480452760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480452758}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.15631, y: -2.956135, z: 643.54645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1650403764
 GameObject:
   m_ObjectHideFlags: 0
@@ -11817,11 +11885,11 @@ Transform:
   m_GameObject: {fileID: 1801772690}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5011139, y: -0.49888363, z: 0.49888363, w: 0.5011139}
-  m_LocalPosition: {x: 0.012, y: -0.71, z: 0}
+  m_LocalPosition: {x: 0, y: 1.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 631022466}
   m_LocalEulerAnglesHint: {x: -0.256, y: -90, z: 90}
 --- !u!1 &2052798819
 GameObject:
@@ -11907,11 +11975,11 @@ Transform:
   m_GameObject: {fileID: 7491991148811239953}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5011139, y: -0.49888363, z: 0.49888363, w: 0.5011139}
-  m_LocalPosition: {x: 0.012, y: 0.54, z: 0}
+  m_LocalPosition: {x: 0, y: 2.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 631022466}
   m_LocalEulerAnglesHint: {x: -0.256, y: -90, z: 90}
 --- !u!198 &7460945393540004856
 ParticleSystem:
@@ -16793,6 +16861,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 235230533}
   - {fileID: 294369178}
-  - {fileID: 654684429615537467}
-  - {fileID: 1801772693}
-  - {fileID: 587301547}
+  - {fileID: 631022466}
+  - {fileID: 1480452760}
